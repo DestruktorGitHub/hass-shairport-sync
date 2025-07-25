@@ -323,6 +323,11 @@ class ShairportSyncMediaPlayer(MediaPlayerEntity):
         """Turn volume down for media player."""
         await self._send_remote_command(Command.VOLUME_DOWN)
 
+    def set_volume_level(self, volume: float) -> None:
+        """PLACEHOLDER"""
+        _LOGGER.debug("Setting volume level to %s", volume)
+        pass
+
     async def async_media_play_pause(self) -> None:
         """Play or pause the media player."""
         _LOGGER.debug(
